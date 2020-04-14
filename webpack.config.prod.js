@@ -30,8 +30,17 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                // use: ['style-loader', 'css-loader'],
                 // use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '/public/path/to/',
+                        },
+                    },
+                    'css-loader',
+                ],
             },
         ],
     },
