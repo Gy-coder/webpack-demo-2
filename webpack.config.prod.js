@@ -45,7 +45,6 @@ module.exports = {
         ],
     },
 }
-/* Advanced configuration (click to show) */
 
 
 
